@@ -3,149 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixel & Play - Games Retrô</title>
+    <title>Validação de Formulário - Exercício EBAC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
 
-    <!-- Google Fonts: Importando as fontes Press Start 2P e Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+        body {
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-    <!-- CSS Externo -->
-    <link rel="stylesheet" href="./main.css" />
+        .container {
+            background-color: #ffffff;
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin-bottom: 24px;
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .mensagem {
+            margin-top: 16px;
+            padding: 12px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            display: none;
+        }
+
+        .sucesso {
+            display: block;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .erro {
+            display: block;
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
 </head>
 <body>
-
-    <!-- CABEÇALHO -->
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>PIXEL & PLAY</h1>
+    <div class="container">
+        <h1>Comparador de Números</h1>
+        <form id="formulario-comparador">
+            <div class="form-group">
+                <label for="campo-a">Campo A:</label>
+                <input type="number" id="campo-a" placeholder="Insira o primeiro número" required>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#sobre">Sobre a Loja</a></li>
-                    <li><a href="#produtos">Consoles</a></li>
-                    <li><a href="#contato">Fale Conosco</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- BANNER COM A FOTO DA LOJA -->
-    <section id="hero">
-        <div class="container hero-content">
-            <img src="./imagens/loja.jpg" alt="Fachada da loja de games retrô" class="hero-image" />
-            <div class="hero-text">
-                <h2>O ponto de encontro dos apaixonados por games clássicos</h2>
-                <p>Cartuchos raros, consoles restaurados e os maiores lançamentos da era de ouro dos videogames.</p>
-                <a href="#produtos" class="btn">Ver Catálogo</a>
+            <div class="form-group">
+                <label for="campo-b">Campo B:</label>
+                <input type="number" id="campo-b" placeholder="Insira o segundo número" required>
             </div>
-        </div>
-    </section>
 
-    <!-- SEÇÃO SOBRE -->
-    <section id="sobre">
-        <div class="container">
-            <h2 class="section-title">Nossa História</h2>
-            <p class="about-text">
-                Fundada no coração do cenário gamer retrô, a <strong>Pixel & Play</strong> é especializada em resgatar memórias nostálgicas. Trabalhamos com manutenção especializada, acessórios de ponta e os consoles que definiram gerações.
-            </p>
-        </div>
-    </section>
+            <button type="submit" id="btn-submit">Submeter</button>
 
-    <!-- SEÇÃO CONSOLES / PRODUTOS -->
-    <section id="produtos">
-        <div class="container">
-            <h2 class="section-title">Plataformas em Destaque</h2>
-            <div class="cards-grid">
-                <!-- Card Nintendo -->
-                <article class="card">
-                    <div class="card-img-wrapper">
-                        <img src="./imagens/nintendo.png" alt="Logo Nintendo" />
-                    </div>
-                    <h3>Nintendo Clássicos</h3>
-                    <p>Reviva as aventuras inesquecíveis de Mario, Zelda e Pokémon em sistemas NES, SNES, N64 e Game Boy.</p>
-                    <a href="#contato" class="btn">Solicitar Orçamento</a>
-                </article>
+            <div id="mensagem-resposta" class="mensagem"></div>
+        </form>
+    </div>
 
-                <!-- Card PlayStation -->
-                <article class="card">
-                    <div class="card-img-wrapper">
-                        <img src="./imagens/playstation.png" alt="Logo PlayStation" />
-                    </div>
-                    <h3>PlayStation Origens</h3>
-                    <p>Os maiores clássicos em 32-bits e 128-bits: PS1 e PS2 restaurados com componentes de alta fidelidade.</p>
-                    <a href="#contato" class="btn">Solicitar Orçamento</a>
-                </article>
-
-                <!-- Card Xbox -->
-                <article class="card">
-                    <div class="card-img-wrapper">
-                        <img src="./imagens/xbox.png" alt="Logo Xbox" />
-                    </div>
-                    <h3>Xbox Legacy</h3>
-                    <p>O poder e a revolução gráfica do Xbox Clássico e do Xbox 360 prontos para jogar com controles originais.</p>
-                    <a href="#contato" class="btn">Solicitar Orçamento</a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- FORMULÁRIO DE CONTATO -->
-    <section id="contato">
-        <div class="container">
-            <h2 class="section-title">Entre em Contato</h2>
-            <p class="subtitle">Procurando um jogo específico ou quer tirar dúvidas sobre restaurações? Mande uma mensagem!</p>
-            
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
-                </div>
-
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required />
-                </div>
-
-                <div class="form-group">
-                    <label for="plataforma">Plataforma de Interesse</label>
-                    <select id="plataforma" name="plataforma">
-                        <option value="nintendo">Nintendo</option>
-                        <option value="playstation">PlayStation</option>
-                        <option value="xbox">Xbox</option>
-                        <option value="outros">Outro console / Raros</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva aqui o que procura..." required></textarea>
-                </div>
-
-                <button type="submit" class="btn-submit">Enviar Mensagem</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- RODAPÉ E REDES SOCIAIS -->
-    <footer>
-        <div class="container footer-content">
-            <p>&copy; 2026 Pixel & Play Games Retrô. Todos os direitos reservados.</p>
-            <div class="social-links">
-                <span>Siga-nos:</span>
-                <a href="#" title="Instagram">
-                    <img src="./imagens/instagram.png" alt="Instagram" />
-                </a>
-                <a href="#" title="Facebook">
-                    <img src="./imagens/facebook.png" alt="Facebook" />
-                </a>
-                <a href="#" title="YouTube">
-                    <img src="./imagens/youtube.png" alt="YouTube" />
-                </a>
-            </div>
-        </div>
-    </footer>
-
+    <script src="./main.js"></script>
 </body>
 </html>
