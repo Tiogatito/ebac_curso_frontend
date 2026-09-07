@@ -3,149 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixel & Play - Games Retrô</title>
-
-    <!-- Google Fonts: Importando as fontes Press Start 2P e Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
-
-    <!-- CSS Externo -->
-    <link rel="stylesheet" href="./main.css" />
+    <title>Exercício Bootstrap - Cadastro</title>
+    <!-- CDN do CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 col-lg-5">
+                <div class="card shadow-sm p-4">
+                    <h2 class="text-center mb-4">Cadastro</h2>
+                    
+                    <form>
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome completo</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+                        </div>
 
-    <!-- CABEÇALHO -->
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>PIXEL & PLAY</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#sobre">Sobre a Loja</a></li>
-                    <li><a href="#produtos">Consoles</a></li>
-                    <li><a href="#contato">Fale Conosco</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="exemplo@email.com" required>
+                        </div>
 
-    <!-- BANNER COM A FOTO DA LOJA -->
-    <section id="hero">
-        <div class="container hero-content">
-            <img src="./imagens/loja.jpg" alt="Fachada da loja de games retrô" class="hero-image" />
-            <div class="hero-text">
-                <h2>O ponto de encontro dos apaixonados por games clássicos</h2>
-                <p>Cartuchos raros, consoles restaurados e os maiores lançamentos da era de ouro dos videogames.</p>
-                <a href="#produtos" class="btn">Ver Catálogo</a>
-            </div>
-        </div>
-    </section>
+                        <div class="mb-3">
+                            <label for="telefone" class="form-label">Telefone</label>
+                            <input type="tel" class="form-control" id="telefone" placeholder="(11) 99999-9999" required>
+                        </div>
 
-    <!-- SEÇÃO SOBRE -->
-    <section id="sobre">
-        <div class="container">
-            <h2 class="section-title">Nossa História</h2>
-            <p class="about-text">
-                Fundada no coração do cenário gamer retrô, a <strong>Pixel & Play</strong> é especializada em resgatar memórias nostálgicas. Trabalhamos com manutenção especializada, acessórios de ponta e os consoles que definiram gerações.
-            </p>
-        </div>
-    </section>
-
-    <!-- SEÇÃO CONSOLES / PRODUTOS -->
-    <section id="produtos">
-        <div class="container">
-            <h2 class="section-title">Plataformas em Destaque</h2>
-            <div class="cards-grid">
-                <!-- Card Nintendo -->
-                <article class="card">
-                    <div class="card-img-wrapper">
-                        <img src="./imagens/nintendo.png" alt="Logo Nintendo" />
-                    </div>
-                    <h3>Nintendo Clássicos</h3>
-                    <p>Reviva as aventuras inesquecíveis de Mario, Zelda e Pokémon em sistemas NES, SNES, N64 e Game Boy.</p>
-                    <a href="#contato" class="btn">Solicitar Orçamento</a>
-                </article>
-
-                <!-- Card PlayStation -->
-                <article class="card">
-                    <div class="card-img-wrapper">
-                        <img src="./imagens/playstation.png" alt="Logo PlayStation" />
-                    </div>
-                    <h3>PlayStation Origens</h3>
-                    <p>Os maiores clássicos em 32-bits e 128-bits: PS1 e PS2 restaurados com componentes de alta fidelidade.</p>
-                    <a href="#contato" class="btn">Solicitar Orçamento</a>
-                </article>
-
-                <!-- Card Xbox -->
-                <article class="card">
-                    <div class="card-img-wrapper">
-                        <img src="./imagens/xbox.png" alt="Logo Xbox" />
-                    </div>
-                    <h3>Xbox Legacy</h3>
-                    <p>O poder e a revolução gráfica do Xbox Clássico e do Xbox 360 prontos para jogar com controles originais.</p>
-                    <a href="#contato" class="btn">Solicitar Orçamento</a>
-                </article>
+                        <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- FORMULÁRIO DE CONTATO -->
-    <section id="contato">
-        <div class="container">
-            <h2 class="section-title">Entre em Contato</h2>
-            <p class="subtitle">Procurando um jogo específico ou quer tirar dúvidas sobre restaurações? Mande uma mensagem!</p>
-            
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
-                </div>
-
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required />
-                </div>
-
-                <div class="form-group">
-                    <label for="plataforma">Plataforma de Interesse</label>
-                    <select id="plataforma" name="plataforma">
-                        <option value="nintendo">Nintendo</option>
-                        <option value="playstation">PlayStation</option>
-                        <option value="xbox">Xbox</option>
-                        <option value="outros">Outro console / Raros</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva aqui o que procura..." required></textarea>
-                </div>
-
-                <button type="submit" class="btn-submit">Enviar Mensagem</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- RODAPÉ E REDES SOCIAIS -->
-    <footer>
-        <div class="container footer-content">
-            <p>&copy; 2026 Pixel & Play Games Retrô. Todos os direitos reservados.</p>
-            <div class="social-links">
-                <span>Siga-nos:</span>
-                <a href="#" title="Instagram">
-                    <img src="./imagens/instagram.png" alt="Instagram" />
-                </a>
-                <a href="#" title="Facebook">
-                    <img src="./imagens/facebook.png" alt="Facebook" />
-                </a>
-                <a href="#" title="YouTube">
-                    <img src="./imagens/youtube.png" alt="YouTube" />
-                </a>
-            </div>
-        </div>
-    </footer>
-
+    <!-- CDN do JS do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
