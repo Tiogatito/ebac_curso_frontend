@@ -2,150 +2,78 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixel & Play - Games Retrô</title>
-
-    <!-- Google Fonts: Importando as fontes Press Start 2P e Inter -->
+    <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
-
-    <!-- CSS Externo -->
-    <link rel="stylesheet" href="./main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- CABEÇALHO -->
     <header>
         <div class="container">
-            <div class="logo">
-                <h1>PIXEL & PLAY</h1>
+            <div class="branding">
+                <img src="https://via.placeholder.com/120x70" />
             </div>
             <nav>
-                <ul>
-                    <li><a href="#sobre">Sobre a Loja</a></li>
-                    <li><a href="#produtos">Consoles</a></li>
-                    <li><a href="#contato">Fale Conosco</a></li>
+                <ul class="menu">
+                    <li>
+                        <a href="#">Início</a>
+                    </li>
+                    <li>
+                        <a href="#">Produtos</a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
-
-    <!-- BANNER COM A FOTO DA LOJA -->
-    <section id="hero">
-        <div class="container hero-content">
-            <img src="./imagens/loja.jpg" alt="Fachada da loja de games retrô" class="hero-image" />
-            <div class="hero-text">
-                <h2>O ponto de encontro dos apaixonados por games clássicos</h2>
-                <p>Cartuchos raros, consoles restaurados e os maiores lançamentos da era de ouro dos videogames.</p>
-                <a href="#produtos" class="btn">Ver Catálogo</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO SOBRE -->
-    <section id="sobre">
+    <section>
         <div class="container">
-            <h2 class="section-title">Nossa História</h2>
-            <p class="about-text">
-                Fundada no coração do cenário gamer retrô, a <strong>Pixel & Play</strong> é especializada em resgatar memórias nostálgicas. Trabalhamos com manutenção especializada, acessórios de ponta e os consoles que definiram gerações.
-            </p>
+            <h2>Produtos</h2>
+            <ul class="products">
+                <li class="product-item">
+                    <img src="https://via.placeholder.com/180x180" />
+                    <h4>Nome do produto</h4>
+                    <p>
+                        Descrição do produto, cor, tamanho, textura, etc.
+                    </p>
+                    <a href="#" class="product-button">
+                        Ver detalhes
+                    </a>
+                </li>
+                <li class="product-item">
+                    <img src="https://via.placeholder.com/180x180" />
+                    <h4>Nome do produto</h4>
+                    <p>
+                        Descrição do produto, cor, tamanho, textura, etc.
+                    </p>
+                    <a href="#" class="product-button">
+                        Ver detalhes
+                    </a>
+                </li>
+                <li class="product-item">
+                    <img src="https://via.placeholder.com/180x180" />
+                    <h4>Nome do produto</h4>
+                    <p>
+                        Descrição do produto, cor, tamanho, textura, etc.
+                    </p>
+                    <a href="#" class="product-button">
+                        Ver detalhes
+                    </a>
+                </li>
+                <li class="product-item">
+                    <img src="https://via.placeholder.com/180x180" />
+                    <h4>Nome do produto</h4>
+                    <p>
+                        Descrição do produto, cor, tamanho, textura, etc.
+                    </p>
+                    <a href="#" class="product-button">
+                        Ver detalhes
+                    </a>
+                </li>
+            </ul>
         </div>
     </section>
-
-    <!-- SEÇÃO CONSOLES / PRODUTOS -->
-    <section id="produtos">
-        <div class="container">
-            <h2 class="section-title">Plataformas em Destaque</h2>
-            <div class="cards-grid">
-                <!-- Card Nintendo -->
-                <article class="card">
-                    <div class="card-img-wrapper">
-                        <img src="./imagens/nintendo.png" alt="Logo Nintendo" />
-                    </div>
-                    <h3>Nintendo Clássicos</h3>
-                    <p>Reviva as aventuras inesquecíveis de Mario, Zelda e Pokémon em sistemas NES, SNES, N64 e Game Boy.</p>
-                    <a href="#contato" class="btn">Solicitar Orçamento</a>
-                </article>
-
-                <!-- Card PlayStation -->
-                <article class="card">
-                    <div class="card-img-wrapper">
-                        <img src="./imagens/playstation.png" alt="Logo PlayStation" />
-                    </div>
-                    <h3>PlayStation Origens</h3>
-                    <p>Os maiores clássicos em 32-bits e 128-bits: PS1 e PS2 restaurados com componentes de alta fidelidade.</p>
-                    <a href="#contato" class="btn">Solicitar Orçamento</a>
-                </article>
-
-                <!-- Card Xbox -->
-                <article class="card">
-                    <div class="card-img-wrapper">
-                        <img src="./imagens/xbox.png" alt="Logo Xbox" />
-                    </div>
-                    <h3>Xbox Legacy</h3>
-                    <p>O poder e a revolução gráfica do Xbox Clássico e do Xbox 360 prontos para jogar com controles originais.</p>
-                    <a href="#contato" class="btn">Solicitar Orçamento</a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- FORMULÁRIO DE CONTATO -->
-    <section id="contato">
-        <div class="container">
-            <h2 class="section-title">Entre em Contato</h2>
-            <p class="subtitle">Procurando um jogo específico ou quer tirar dúvidas sobre restaurações? Mande uma mensagem!</p>
-            
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
-                </div>
-
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required />
-                </div>
-
-                <div class="form-group">
-                    <label for="plataforma">Plataforma de Interesse</label>
-                    <select id="plataforma" name="plataforma">
-                        <option value="nintendo">Nintendo</option>
-                        <option value="playstation">PlayStation</option>
-                        <option value="xbox">Xbox</option>
-                        <option value="outros">Outro console / Raros</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva aqui o que procura..." required></textarea>
-                </div>
-
-                <button type="submit" class="btn-submit">Enviar Mensagem</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- RODAPÉ E REDES SOCIAIS -->
-    <footer>
-        <div class="container footer-content">
-            <p>&copy; 2026 Pixel & Play Games Retrô. Todos os direitos reservados.</p>
-            <div class="social-links">
-                <span>Siga-nos:</span>
-                <a href="#" title="Instagram">
-                    <img src="./imagens/instagram.png" alt="Instagram" />
-                </a>
-                <a href="#" title="Facebook">
-                    <img src="./imagens/facebook.png" alt="Facebook" />
-                </a>
-                <a href="#" title="YouTube">
-                    <img src="./imagens/youtube.png" alt="YouTube" />
-                </a>
-            </div>
-        </div>
-    </footer>
-
 </body>
 </html>

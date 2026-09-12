@@ -1,0 +1,30 @@
+@use 'variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fonte-padrao;
+}
+
+body {
+    background-color: $cor-fundo;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: $largura-maxima;
+    width: 100%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1023px) {
+        max-width: 80%;
+    }
+}
+
+section {
+    padding: 56px 0;
+}
