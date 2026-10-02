@@ -1,0 +1,77 @@
+@use 'variables' as *;
+
+.about {
+  overflow: hidden;
+  background: $color-dark;
+  color: $color-white;
+}
+
+.about__inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: .7fr 1fr;
+  gap: 44px;
+  padding-block: clamp(72px, 9vw, 122px);
+
+  > .eyebrow {
+    color: rgba($color-white, .58);
+  }
+}
+
+.about__content {
+  max-width: 650px;
+
+  h2 {
+    max-width: 620px;
+    font-size: clamp(46px, 6vw, 78px);
+    font-weight: 400;
+    letter-spacing: -.075em;
+    line-height: .98;
+  }
+
+  p {
+    max-width: 470px;
+    margin-top: 24px;
+    color: rgba($color-white, .64);
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .text-link {
+    margin-top: 31px;
+  }
+}
+
+.text-link--light {
+  border-color: rgba($color-white, .55);
+  color: $color-white;
+}
+
+.about__ornament {
+  position: absolute;
+  right: 3%;
+  bottom: -70px;
+  color: rgba($color-accent, .72);
+  font-family: $font-serif;
+  font-size: clamp(180px, 27vw, 360px);
+  line-height: 1;
+  pointer-events: none;
+}
+
+@media (max-width: 680px) {
+  .about__inner {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .about__content h2 {
+    max-width: 420px;
+    font-size: 56px;
+  }
+
+  .about__ornament {
+    right: -8%;
+    bottom: -46px;
+    font-size: 220px;
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "galeria-lume",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Galeria fotográfica com compilação e otimização de arquivos via Gulp.",
+  "scripts": {
+    "build": "gulp",
+    "styles": "gulp styles",
+    "images": "gulp images",
+    "scripts": "gulp scripts",
+    "clean": "gulp clean",
+    "watch": "gulp watchFiles"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.89.2",
+    "sharp": "^0.35.5"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}

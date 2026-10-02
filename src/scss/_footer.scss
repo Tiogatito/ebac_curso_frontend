@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+.site-footer {
+  display: flex;
+  width: 87%;
+  max-width: $content-width;
+  min-height: 92px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-inline: auto;
+  color: $color-muted;
+  font-size: 10px;
+}
+
+.brand--footer .brand__mark {
+  width: 29px;
+  height: 29px;
+  font-size: 18px;
+}
+
+.brand--footer .brand__name {
+  color: $color-ink;
+  font-size: 21px;
+}
+
+@media (max-width: 560px) {
+  .site-footer {
+    min-height: 82px;
+  }
+
+  .site-footer > p {
+    display: none;
+  }
+}

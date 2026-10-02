@@ -1,0 +1,136 @@
+@use 'variables' as *;
+
+.site-header {
+  position: relative;
+  z-index: 5;
+  border-bottom: 1px solid rgba($color-ink, .09);
+}
+
+.site-header__inner {
+  display: flex;
+  width: 87%;
+  max-width: $content-width;
+  min-height: 82px;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: auto;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.brand__mark {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid $color-accent;
+  border-radius: 50%;
+  color: $color-accent;
+  font-family: $font-serif;
+  font-size: 21px;
+  line-height: 1;
+}
+
+.brand__name {
+  font-family: $font-serif;
+  font-size: 24px;
+  letter-spacing: -.06em;
+
+  span {
+    color: $color-accent;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: clamp(24px, 4vw, 58px);
+  margin-left: 8%;
+
+  a {
+    color: $color-muted;
+    font-size: 12px;
+    transition: color .2s ease;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}
+
+.header-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: $color-muted;
+  font-size: 10px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.header-note__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: $color-accent;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .site-header__inner {
+    min-height: 72px;
+  }
+
+  .menu-toggle {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    align-content: center;
+    justify-items: center;
+    gap: 5px;
+    border: 1px solid $color-line;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+
+    span {
+      width: 15px;
+      height: 1px;
+      background: $color-ink;
+    }
+  }
+
+  .navigation {
+    position: absolute;
+    top: 71px;
+    right: 0;
+    left: 0;
+    display: none;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    padding: 8px $page-gutter 18px;
+    border-bottom: 1px solid $color-line;
+    background: $color-paper;
+
+    &.is-open {
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      padding: 12px 0;
+    }
+  }
+
+  .header-note {
+    display: none;
+  }
+}
