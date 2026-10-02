@@ -1,0 +1,121 @@
+.announcement {
+  padding: 0.65rem 1rem;
+  background: @colors[forest];
+  color: @colors[white];
+  text-align: center;
+
+  p {
+    font-size: 0.67rem;
+    letter-spacing: 0.045em;
+  }
+}
+
+.site-header {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  border-bottom: 1px solid fade(@colors[ink], 10%);
+  background: fade(@colors[paper], 95%);
+  backdrop-filter: blur(14px);
+}
+
+.site-header__inner {
+  display: flex;
+  min-height: 5.5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.brand {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.brand__mark {
+  display: grid;
+  width: 2.2rem;
+  height: 2.2rem;
+  place-items: center;
+  border: 1px solid @colors[accent];
+  border-radius: 50%;
+  color: @colors[accent];
+  font-family: @font-display;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.brand__name {
+  font-family: @font-display;
+  font-size: 1.35rem;
+  letter-spacing: -0.055em;
+
+  span {
+    color: @colors[accent];
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.2rem, 3.5vw, 3.25rem);
+
+  a {
+    color: @colors[muted];
+    font-size: 0.78rem;
+    transition: color @transition;
+
+    &:hover {
+      color: @colors[accent];
+    }
+  }
+}
+
+.header-link {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.8rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid @colors[accent];
+  font-size: 0.76rem;
+  font-weight: 700;
+
+  span {
+    color: @colors[accent];
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: @breakpoints[wide]) {
+  .site-header__inner {
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: @breakpoints[tablet]) {
+  .header-link {
+    display: none;
+  }
+}
+
+@media (max-width: @breakpoints[mobile]) {
+  .site-header__inner {
+    min-height: auto;
+    flex-wrap: wrap;
+    row-gap: 0.8rem;
+    padding-block: 0.9rem;
+  }
+
+  .navigation {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.7rem;
+
+    a {
+      font-size: 0.72rem;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "casa-norte-less",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vitrine responsiva com estilos organizados e compilados em LESS.",
+  "scripts": {
+    "build": "lessc src/less/main.less styles.css"
+  },
+  "devDependencies": {
+    "less": "4.9.1"
+  }
+}
