@@ -1,231 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Objetos de design para acompanhar a rotina com beleza, cuidado e simplicidade."
-    />
-    <meta name="theme-color" content="#f5f3ec" />
-    <title>Casa Norte — objetos para estar por perto</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="dist/js/main.min.js" defer></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-
-    <div class="announcement" aria-label="Mensagem da loja">
-      <p>Objetos escolhidos com calma, para acompanhar todos os dias.</p>
-    </div>
-
-    <header class="site-header" id="inicio">
-      <div class="site-header__inner container">
-        <a class="brand" href="#inicio" aria-label="Casa Norte, início">
-          <span class="brand__mark" aria-hidden="true">N</span>
-          <span class="brand__name">casa norte<span>.</span></span>
-        </a>
-
-        <nav class="navigation" aria-label="Navegação principal">
-          <a href="#inicio">Início</a>
-          <a href="#produtos">Produtos</a>
-          <a href="#sobre">Sobre a coleção</a>
-        </nav>
-
-        <a class="header-link" href="#produtos">
-          Ver coleção <span aria-hidden="true">↘</span>
-        </a>
-      </div>
-    </header>
-
-    <main id="conteudo">
-      <section class="intro container" aria-labelledby="intro-title">
-        <div class="intro__copy">
-          <p class="eyebrow"><span aria-hidden="true"></span> Coleção essencial · 01</p>
-          <h1 id="intro-title">A casa fala nos <em>detalhes.</em></h1>
-          <p class="intro__description">
-            Peças de formas simples e materiais honestos, feitas para encontrar
-            seu lugar na rotina.
-          </p>
-          <a class="button-link" href="#produtos">
-            Descubra os produtos <span aria-hidden="true">↓</span>
-          </a>
-        </div>
-
-        <div class="intro-art" aria-hidden="true">
-          <span class="intro-art__index">CASA NORTE · SÉRIE 01</span>
-          <span class="intro-art__word">casa<span>.</span></span>
-          <span class="intro-art__caption">Feito para estar por perto.</span>
-          <span class="intro-art__seal">CN</span>
-          <span class="intro-art__line"></span>
-        </div>
-      </section>
-
-      <section class="catalog" id="produtos" aria-labelledby="catalog-title">
-        <div class="container">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow"><span aria-hidden="true"></span> Feito para o cotidiano</p>
-              <h2 id="catalog-title">Peças em destaque</h2>
-            </div>
-            <p class="section-heading__note">
-              Formas, texturas e pequenos detalhes<br />
-              para deixar a casa com a sua cara.
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício boas práticas de CSS</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="produtos">
+        <div class="produto">
+            <img class="produto__imagem" src="assets/images/produto.svg" alt="Imagem ilustrativa do produto">
+            <h4 class="produto__nome">Nome do produto</h4>
+            <p class="produto__descricao">
+                Descrição do produto
             </p>
-          </div>
-
-          <ul class="products">
-            <li class="product-item" id="vaso-aurora">
-              <article class="product-card">
-                <div class="product-art product-art--clay">
-                  <img
-                    src="assets/products/vaso-aurora.svg"
-                    alt="Vaso de cerâmica em tom areia, com um ramo delicado"
-                    width="720"
-                    height="600"
-                  />
-                  <span class="product-number" aria-hidden="true">01</span>
-                </div>
-                <div class="product-card__body">
-                  <p class="product-category">Cerâmica · feito à mão</p>
-                  <div class="product-card__title-row">
-                    <h3>Vaso Aurora</h3>
-                    <span class="product-price">R$ 189</span>
-                  </div>
-                  <p class="product-description">
-                    Esmalte mineral fosco e linhas orgânicas para flores ou ramos secos.
-                  </p>
-                  <details class="product-details">
-                    <summary>Ver detalhes <span aria-hidden="true">↗</span></summary>
-                    <p>Produzido em cerâmica de alta temperatura. Cada peça tem pequenas variações de forma e tonalidade.</p>
-                  </details>
-                </div>
-              </article>
-            </li>
-
-            <li class="product-item" id="luminaria-brisa">
-              <article class="product-card">
-                <div class="product-art product-art--stone">
-                  <img
-                    src="assets/products/luminaria-brisa.svg"
-                    alt="Luminária de mesa com cúpula clara e base de madeira"
-                    width="720"
-                    height="600"
-                  />
-                  <span class="product-number" aria-hidden="true">02</span>
-                </div>
-                <div class="product-card__body">
-                  <p class="product-category">Iluminação · madeira e linho</p>
-                  <div class="product-card__title-row">
-                    <h3>Luminária Brisa</h3>
-                    <span class="product-price">R$ 429</span>
-                  </div>
-                  <p class="product-description">
-                    Luz suave e desenho leve para acompanhar o fim do dia.
-                  </p>
-                  <details class="product-details">
-                    <summary>Ver detalhes <span aria-hidden="true">↗</span></summary>
-                    <p>Base torneada em madeira e cúpula em tecido de linho. Ideal para uma lâmpada de luz quente.</p>
-                  </details>
-                </div>
-              </article>
-            </li>
-
-            <li class="product-item" id="bandeja-orla">
-              <article class="product-card">
-                <div class="product-art product-art--sage">
-                  <img
-                    src="assets/products/bandeja-orla.svg"
-                    alt="Bandeja baixa de madeira com copo e pequeno vaso"
-                    width="720"
-                    height="600"
-                  />
-                  <span class="product-number" aria-hidden="true">03</span>
-                </div>
-                <div class="product-card__body">
-                  <p class="product-category">Mesa · madeira maciça</p>
-                  <div class="product-card__title-row">
-                    <h3>Bandeja Orla</h3>
-                    <span class="product-price">R$ 148</span>
-                  </div>
-                  <p class="product-description">
-                    Um apoio versátil para servir, organizar e criar novos rituais.
-                  </p>
-                  <details class="product-details">
-                    <summary>Ver detalhes <span aria-hidden="true">↗</span></summary>
-                    <p>Madeira com acabamento natural e bordas arredondadas. Limpar com pano macio e levemente úmido.</p>
-                  </details>
-                </div>
-              </article>
-            </li>
-
-            <li class="product-item" id="caderno-traco">
-              <article class="product-card">
-                <div class="product-art product-art--blue">
-                  <img
-                    src="assets/products/caderno-traco.svg"
-                    alt="Caderno de capa azul com folhas de papel creme"
-                    width="720"
-                    height="600"
-                  />
-                  <span class="product-number" aria-hidden="true">04</span>
-                </div>
-                <div class="product-card__body">
-                  <p class="product-category">Papelaria · capa dura</p>
-                  <div class="product-card__title-row">
-                    <h3>Caderno Traço</h3>
-                    <span class="product-price">R$ 72</span>
-                  </div>
-                  <p class="product-description">
-                    Páginas para anotar ideias, desenhar planos e guardar lembranças.
-                  </p>
-                  <details class="product-details">
-                    <summary>Ver detalhes <span aria-hidden="true">↗</span></summary>
-                    <p>Capa rígida revestida em tecido, miolo pontilhado e marcador de página em fita de algodão.</p>
-                  </details>
-                </div>
-              </article>
-            </li>
-          </ul>
         </div>
-      </section>
-
-      <section class="about container" id="sobre" aria-labelledby="about-title">
-        <p class="eyebrow"><span aria-hidden="true"></span> Nosso jeito de escolher</p>
-        <div class="about__content">
-          <h2 id="about-title">Menos excesso.<br /><em>Mais significado.</em></h2>
-          <p>
-            A Casa Norte reúne objetos que combinam função, matéria e cuidado.
-            Uma coleção pequena, pensada para durar e fazer parte da vida como ela é.
-          </p>
+        <div class="produto produto--em-destaque">
+            <img class="produto__imagem" src="assets/images/produto.svg" alt="Imagem ilustrativa do produto">
+            <h4 class="produto__nome">Nome do produto</h4>
+            <p class="produto__descricao">
+                Descrição do produto
+            </p>
         </div>
-      </section>
-    </main>
-
-    <footer class="site-footer" id="contato">
-      <div class="site-footer__inner container">
-        <a class="brand brand--footer" href="#inicio" aria-label="Casa Norte, voltar ao início">
-          <span class="brand__mark" aria-hidden="true">N</span>
-          <span class="brand__name">casa norte<span>.</span></span>
-        </a>
-        <p>Objetos para estar por perto.</p>
-        <ul class="social-links" aria-label="Canais da Casa Norte">
-          <li><a href="https://github.com/" aria-label="GitHub"><img src="assets/icons/github.svg" alt="" width="24" height="24" /></a></li>
-          <li><a href="https://www.instagram.com/" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" width="24" height="24" /></a></li>
-          <li><a href="https://www.linkedin.com/" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg" alt="" width="24" height="24" /></a></li>
-          <li><a href="mailto:?subject=Casa%20Norte" aria-label="Enviar e-mail"><img src="assets/icons/mail.svg" alt="" width="24" height="24" /></a></li>
-        </ul>
-      </div>
-      <div class="site-footer__bottom container">
-        <span>© 2026 Casa Norte</span>
-        <a href="#inicio">Voltar ao topo ↑</a>
-      </div>
-    </footer>
-  </body>
+        <div class="produto">
+            <img class="produto__imagem" src="assets/images/produto.svg" alt="Imagem ilustrativa do produto">
+            <h4 class="produto__nome">Nome do produto</h4>
+            <p class="produto__descricao">
+                Descrição do produto
+            </p>
+        </div>
+    </div>
+</body>
 </html>

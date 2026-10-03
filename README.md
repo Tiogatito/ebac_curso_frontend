@@ -1,30 +1,24 @@
-# Casa Norte
+# Boas práticas de CSS
 
-Vitrine responsiva de objetos para casa, desenvolvida a partir do HTML de apoio do módulo. Os estilos ficam em LESS, organizados por seção, e são compilados pelo Grunt. O JavaScript da página também é minificado pelo Grunt.
+Exercício do módulo 19: aplicação da metodologia BEM ao HTML e ao CSS fornecidos no material de apoio.
 
-## Executar
+## Visualizar
 
-Requer Node.js e npm.
+Abra `index.html` no navegador. O projeto utiliza HTML e CSS puro e não precisa de instalação ou compilação.
 
-```bash
-npm ci
-npm run build
-```
+## Classes BEM
 
-Depois, abra `index.html` no navegador. O build atualiza `styles.css` e gera `dist/js/main.min.js`.
+| Classe | Papel |
+| --- | --- |
+| `produtos` | Bloco que organiza a lista de produtos |
+| `produto` | Bloco independente de cada produto |
+| `produto__imagem` | Elemento de imagem do produto |
+| `produto__nome` | Elemento de nome do produto |
+| `produto__descricao` | Elemento de descrição do produto |
+| `produto--em-destaque` | Modificador aplicado junto ao bloco `produto` |
 
-## Tarefas do Grunt
+As propriedades CSS do material de apoio foram preservadas, incluindo a grade de três colunas, a tipografia, as margens e o destaque amarelo do segundo produto. Os seletores e as classes HTML foram atualizados em conjunto.
 
-- `npm run styles` compila `src/less/main.less` em `styles.css`.
-- `npm run scripts` minifica `src/js/main.js` em `dist/js/main.min.js`.
-- `npm run build` executa as duas tarefas.
+O endereço de imagem do material original não carregou durante a conferência. `assets/images/produto.svg` fornece o marcador de 100 × 100 localmente, com texto alternativo no HTML.
 
-O script da página mantém apenas um painel de detalhes de produto aberto por vez. A configuração das tarefas está em `Gruntfile.js`.
-
-## Organização do LESS
-
-- `main.less` reúne os módulos com `@import`.
-- `_variables.less` centraliza variáveis e mapas de cores e larguras.
-- `_mixins.less` contém regras reutilizáveis para largura, superfície e foco.
-- Os demais arquivos dividem os estilos por área da página.
-- `~"..."` preserva a expressão CSS `calc()` para que o navegador calcule a largura fluida do conteúdo.
+A entrega está na branch `boas_praticas_css`.
