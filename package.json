@@ -1,0 +1,13 @@
+{
+  "name": "exercicio-es6",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Exercício do módulo 25 — filtragem de alunos com ES6",
+  "scripts": {
+    "start": "node demonstracao.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
