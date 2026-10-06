@@ -1,0 +1,12 @@
+{
+  "name": "exercicio-orientacao-objetos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Exercício do módulo 24 — orientação a objetos com JavaScript",
+  "scripts": {
+    "start": "node demonstracao.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
