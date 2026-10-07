@@ -1,0 +1,16 @@
+{
+  "name": "exercicio-cypress",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "test": "cypress run",
+    "test:open": "cypress open",
+    "test:chrome": "cypress run --browser chrome"
+  },
+  "devDependencies": {
+    "cypress": "16.1.1"
+  }
+}
